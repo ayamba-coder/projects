@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(196, 196, 13);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:sans-serif;
+    overflow-y: hidden;
+}
+.main{
+    background-color: white;
+    height: 17rem;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.main span{
+    align-self: flex-end;
+    transform: translateX(-15%);
+    color: green;
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.main h2{
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0;
+}
+.main input{
+    outline: none;
+    width: 86%;
+    line-height: 46px;
+    border: 4px solid rgb(65, 180, 65);
+    caret-color: green;
+    text-align: center;
+}
+.main input::placeholder{
+    font-style: italic;
+    text-align: center;
+    font-size: 1.1rem;
+    color: lightgray;
+    font-weight: bold;
+    font-family: cursive;
+    opacity: 0.5;
+}
+
+.main a{
+    text-decoration: none;
+    background-color: green;
+    border-radius: 5px;
+    padding: 12px 0;
+    text-align: center;
+    width: 90%;
+    text-transform: capitalize;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.main a:hover{
+    filter:brightness(0.9);
+}
+
+@media  screen and (max-width:481px) {
+    .main{
+        width: 100%;
+        height: 17rem;
+        padding: 0;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1024px){
+    .main{
+        height:18rem ;
+        width: 75%;
+    }
+}

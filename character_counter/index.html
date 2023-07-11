@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCounter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Real-time Character Counter</h2>
+        <div class="editor">
+            <textarea name="" placeholder="write your text here" maxlength="100"></textarea>
+        </div>
+        <div class="counter">
+            <span>total Characters: <i id="char_t">0</i></span>
+            <span>remaining: <i id="char_r">100</i></span>
+        </div>
+    </div>
+    <!-- A more better way was to programmatically set total and remaining chars rather than hardcoding. am in my lazymode :) -->
+    <script src="index.js"></script>
+</body>
+</html>

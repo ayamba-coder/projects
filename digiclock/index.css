@@ -1,0 +1,62 @@
+:root{
+    font-size: 16px;
+    color: white;
+    text-transform:uppercase;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    flex-direction: column;
+    font-family: sans-serif;
+    overflow-y: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    column-gap: 5px;
+    overflow: hidden;
+}
+.container div{
+    box-sizing:border-box ;
+    margin: 0;
+    display: inline-block;
+}
+.container div h4{
+    font-size: 3rem;
+    background-color: slateblue;
+    text-shadow: 2px 7px 9px rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+    padding: 45px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container div span{
+    background-color: darkblue;
+    opacity: .8;
+    margin: 0;
+    padding: 0 45px;
+}
+h3{
+    text-align: center;
+    letter-spacing: 20px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+.container > span{
+    transform: translateY(80%);
+    background-color: green;
+    line-height: 38px;
+    font-size: 1.4rem;
+    width:60px;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
