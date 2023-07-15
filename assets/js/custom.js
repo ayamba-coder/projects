@@ -1,5 +1,6 @@
 var Logo = document.querySelector(".navbar-brand");
 var cpDate = document.querySelector(".copyrightDate");
+var linker = document.querySelector(".downloadBtn")
 var slogans = "Eat Sleep Code Repeat";
 
 var charIndex = 0;
@@ -12,5 +13,28 @@ function animateSlogan() {
         charIndex = 0;
     }
 }
+function dwnload(){
+    fetch('')
+   // check to make sure you didn't have an unexpected failure (may need to check other things here depending on use case / backend)
+  .then(resp => resp.status === 200 ? resp.blob() : Promise.reject('something went wrong'))
+  .then(blob => {
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    // the filename you want
+    a.download = 'mycv.pdf';
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    // or you know, something with better UX...
+    alert("Thanks for downloading,waiting to work with you"); 
+  })
+  .catch(() => alert('oh no!'));
+}
+
+linker.addEventListener("click",()=>{
+    dwnload();
+})
 cpDate.innerText = date.getFullYear()
 setInterval(animateSlogan, 140);
