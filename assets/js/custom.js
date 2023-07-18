@@ -23,7 +23,7 @@ function dwnload(){
     a.style.display = 'none';
     a.href = url;
     // the filename you want
-    a.download = 'js.pdf';
+    a.download = './cv.pdf';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
