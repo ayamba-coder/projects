@@ -23,7 +23,7 @@ function dwnload(){
     a.style.display = 'none';
     a.href = url;
     // the filename you want
-    a.download = './cv.pdf';
+    a.download = 'https://github.com/ayamba-coder/projects/blob/10175c08317cc0ac4edb02a44b66f9271153c63e/assets/js/cv.pdf';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
