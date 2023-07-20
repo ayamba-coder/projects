@@ -15,7 +15,7 @@ function animateSlogan() {
 }
 function dwnload(){
     fetch('')
-   // check to make sure you didn't have an unexpected failure (may need to check other things here depending on use case / backend)
+   // check to make sure I didn't have an unexpected failure (may need to check other things here depending on use case / backend)
   .then(resp => resp.status === 200 ? resp.blob() : Promise.reject('something went wrong'))
   .then(blob => {
     const url = window.URL.createObjectURL(blob);
@@ -23,11 +23,10 @@ function dwnload(){
     a.style.display = 'none';
     a.href = url;
     // the filename you want
-    a.download = 'mycv.pdf';
+    a.download = 'https://github.com/ayamba-coder/projects/blob/10175c08317cc0ac4edb02a44b66f9271153c63e/assets/js/cv.pdf';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
-    // or you know, something with better UX...
     alert("Thanks for downloading,waiting to work with you"); 
   })
   .catch(() => alert('oh no!'));
