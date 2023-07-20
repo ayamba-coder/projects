@@ -1,7 +1,7 @@
 var Logo = document.querySelector(".navbar-brand");
 var cpDate = document.querySelector(".copyrightDate");
 var linker = document.querySelector(".downloadBtn")
-var slogans = "Eat Sleep Code Repeat";
+var slogans = "Eat,Code,Sleep,Repeat";
 
 var charIndex = 0;
 var date = new Date();
