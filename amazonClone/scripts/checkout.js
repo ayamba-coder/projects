@@ -1,5 +1,4 @@
 let cart = getLocalCart();
-// let cartCounter = document.querySelector(".checkout-header-middle-section .return-to-home-link");
 let cartCounter = document.querySelector(".cart-quantity");
 updateCartCounter(cartCounter)
 cart.length > 0 ? populatePage(cart,rawfn) : document.querySelector(".summary").innerHTML = "<div class='summary-empty'>Empty Cart</div>"
@@ -27,6 +26,7 @@ deleteBtn.forEach(btn=>{
           if (e.target.dataset.id == item.id.valueOf()) {
             cart.splice(cart.indexOf(item),1);
             storeItemLocally(cart);
+            calculateOrder();
             let itemCrad =  document.querySelector(`#e${item.id.slice(1,3)}`);
             itemCrad.style.display = "none";
             cartCounter.innerText = `${cart.length} item${cart.length > 1 ? 's' : ''}`
