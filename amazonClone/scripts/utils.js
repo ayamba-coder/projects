@@ -15,7 +15,7 @@ function populatePage(data,rawfn) {
 }
 
 function storeItemLocally(cart){
-
+   
    localStorage.setItem(`cart`,JSON.stringify(cart));
 }
 
@@ -23,7 +23,7 @@ function getLocalCart(){
    return localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
  }
 
- function updateCartCounter(){
+ function updateCartCounter(cartCounter){
    let accumulator = 0
    cart.forEach(product => {
       accumulator += parseInt(product.quantity);
@@ -33,3 +33,36 @@ function getLocalCart(){
    });
    cartCounter.innerHTML = accumulator;
  }
+ function calculateOrder(){
+   let subTotal = 0;
+   let shipping = 0;
+   let subShipping = 0;
+   let grand_total = 0;
+   cart.forEach(cartItem => {
+      let price = parseFloat(cartItem.price);
+      let quantity = parseFloat(cartItem.quantity);
+      let shipping = parseFloat(cartItem.shipping);
+      let total = (price*quantity) + shipping;
+      subTotal += total;
+      shipping = shipping
+      subShipping += shipping;
+   });
+   grand_total = subTotal + subShipping;
+   document.querySelector(".subTotal").innerHTML = `$${subTotal.toFixed(2)}`;
+   document.querySelector(".subShipping").innerHTML = `$${subShipping.toFixed(2)}`;
+   document.querySelector(".grand_total").innerHTML = `$${grand_total.toFixed(2)}`
+   switch (shipping) {
+      case 0:
+         console.log(shipping);
+         break;
+      case 4.99:
+         console.log(shipping);
+         break;
+      case 9.99:
+         console.log(shipping);
+         break;
+      default:
+         break;
+   }
+   document.querySelector(".delivery-date").innerText = `Delivery date: Tuesday, June 21`
+}

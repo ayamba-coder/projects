@@ -63,6 +63,9 @@
   .products-grid {
     grid-template-columns: 1fr;
   }
+  .main{
+    margin-top: 130px;
+  }
 }
 
 .product-container {

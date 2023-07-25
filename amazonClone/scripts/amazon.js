@@ -1,7 +1,8 @@
 let cart = getLocalCart();
 const products_grid = document.querySelector(".products-grid");
-let cartCounter = document.querySelector(".cart-quantity")
-updateCartCounter();
+let cartCounter = document.querySelector(".cart-quantity");
+
+updateCartCounter(cartCounter);
 // Sometimes different users may use different browser to access site
 // Hence local storage becomes empty in browser.
 // 1 way to overcome this is by enforcing user to get a session by login before he can create cart
@@ -10,8 +11,6 @@ updateCartCounter();
 getData().then(data=>{
     populatePage(data,rawfn);
 }).then(()=> configurePage());
-
-updateCartCounter(document.querySelector(".cart-quantity"));
 
 function configurePage(){
   const addToCartBtn = document.querySelectorAll(".add-to-cart-button");
@@ -22,8 +21,9 @@ function configurePage(){
            let quantityChecked = document.getElementById(`${product.quantity}`);
            product.id = product.quantity;
            product.quantity = quantityChecked.value;
+           product.shipping = 0.00; // default shipping fee for all products
            cart.push(product);
-           updateCartCounter();
+           updateCartCounter(cartCounter);
            storeItemLocally(cart);
            el.previousElementSibling.style.visibility = "visible";
            el.style.display="none";
