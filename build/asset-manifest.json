@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/trackmylost/static/css/main.eb8a8d36.css",
+    "main.js": "/trackmylost/static/js/main.777d26c2.js",
+    "static/media/women.jpg": "/trackmylost/static/media/women.a6bd5ecbdf038ea394f6.jpg",
+    "static/media/logo.png": "/trackmylost/static/media/logo.03deaaf384cbacbaef8f.png",
+    "service-worker.js": "/trackmylost/service-worker.js",
+    "static/media/dot-pattern.svg": "/trackmylost/static/media/dot-pattern.ee6f4f0e6654d6e38850896165f9dc36.svg",
+    "index.html": "/trackmylost/index.html",
+    "static/media/quotes-l.svg": "/trackmylost/static/media/quotes-l.075e0fe3e775496713dce7e02c3f74ed.svg"
+  },
+  "entrypoints": [
+    "static/css/main.eb8a8d36.css",
+    "static/js/main.777d26c2.js"
+  ]
+}
